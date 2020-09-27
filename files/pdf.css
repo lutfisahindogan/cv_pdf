@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;}
+
+#contenedor {
+  background-color: #e5e5e5;
+}
+
+button#guardar {
+  color: #ffffff;
+  width: 45%;
+  padding: 10px;
+  background: #58af61;
+  font-size: 18px;
+  float: left;
+}
+
+button#descargar {
+  color: #ffffff;
+  width: 45%;
+  padding: 10px;
+  background: #eb5756;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.cv-pdf {
+  display: block;
+  margin: 0;
+  background-color: #fff;
+  padding: 0;
+}
+
+
+table.container {
+  height: 100%;
+  width: 100%;
+}
+
+table.container, table.container td, table.container th {
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+
+.contenido {
+  width: 100%; }
+
+.columna2 {
+   }
+
+.contenedor {
+  position: relative; }
+
+.sidebar-pdf {
+  position: absolute;
+  display: block;
+  right: 0;
+  z-index: 100; 
+  margin-top: 60px;
+}
+
+.sidebar-pdf ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #4F4F4F; }
+
+.sidebar-pdf .barra-sidebar {
+  background-color: #ffffff;
+  height: 100%;
+  padding: 10px 23px 23px 23px;
+  width: 306px;
+  box-shadow: 
+    -2px 0 7px -4px rgba(0, 0, 0, 0.8),
+    -2px 0 7px -4px rgba(0, 0, 0, 0.8),
+    0 0 0 0 white, 
+    -2px 0 7px -4px rgba(0, 0, 0, 0.8);}
+
+.sidebar-pdf .cerrar {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  width: 65px;
+  height: 52px;
+  text-align: center;
+  left: -65px;
+  cursor: pointer;
+  box-shadow: 
+    -2px 0 7px -4px rgba(0, 0, 0, 0.8),
+    -2px 0 7px -4px rgba(0, 0, 0, 0.8),
+    0 0 0 0 white, 
+    -2px 0 7px -4px rgba(0, 0, 0, 0.8); }
+
+.sidebar-pdf .cerrar .fa {
+  font-size: 34px;
+  margin: 9px;
+}
+
+.sidebar-pdf ul {
+  margin-bottom: 10px; }
+
+.sidebar-pdf li {
+  display: block;
+  padding: 10px 5px; }
+
+.sidebar-pdf ul.colores li:hover {
+  cursor: pointer;
+  box-shadow:  -2px 0px 7px 0px rgba(0,0,0,0.8);}
+
+.sidebar-pdf .colores li {
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+  margin: 1%;
+  border-radius: 50%; }
+
+.sidebar-pdf .secciones li, .sidebar-pdf .elementos li {
+  display: block;
+  margin: 0 ;
+  padding: 2% 0;
+  font-size: 15px; }
+
+.sidebar-pdf .titulo {
+  font-size: 16px;
+  color: #4F4F4F;
+  text-transform: uppercase;
+  border-bottom: 2px solid #BDBDBD;
+  padding: 1% 0;
+  margin-bottom: 2%; }
+
+.barra {
+  position:relative;
+}
+.barra-edicion {
+  display: none;
+  position:absolute;
+  line-height: 1em;
+  right: 1px;
+  top: -14px;
+}
+.barra:hover .barra-edicion {
+  display: block;
+}
+.barra:focus .barra-edicion {
+  display: block;
+}
+.barra .icono {
+  background-color: #000;
+  color: #fff;
+  line-height: 1em;
+  font-size: 1.4em;
+  text-align: center;
+  vertical-align: middle;
+  display: none;
+  cursor: pointer;
+  padding: 0.2em;
+  width: 1.3em;
+  height: 1.3em;
+  margin-top: -1px;
+  margin-right: -2px;
+}
+
+.borrable:hover > .barra-edicion > .icono.arriba {
+  display: inline-block;
+}
+.borrable:hover > .barra-edicion > .icono.abajo {
+  display: inline-block;
+}
+.borrable:hover > .barra-edicion > .icono.borrable {
+  display: inline-block;
+}
+.expandible:hover > .barra-edicion > .icono.expandible {
+  display: inline-block;
+}
+
+.tooltip, .arrow:after {
+  background: black;
+  border: 2px solid white;
+}
+
+.tooltip {
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  padding: 5px;
+  color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font: bold 14px "Helvetica Neue", Sans-Serif;
+  font-stretch: condensed;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 0 7px black;
+  pointer-events: none;
+  overflow: auto;
+  max-width: 300px;
+  max-height: 135px;
+}
+.arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+.arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  -webkit-box-shadow: 6px 5px 9px -9px black,
+                      5px 6px 9px -9px black;
+  -moz-box-shadow: 6px 5px 9px -9px black,
+                   5px 6px 9px -9px black;
+  box-shadow: 6px 5px 9px -9px black,
+              5px 6px 9px -9px black;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+}
+.tooltip.active {
+  opacity: 1;
+  margin-top: 5px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+  pointer-events: auto;
+}
+.tooltip.out {
+  opacity: 0;
+  margin-top: -20px;
+}
+
+.tooltip svg {
+  cursor: pointer;
+  margin: 1px 5px;
+  width: 40px;
+  border-bottom: 2px solid #000;
+}
+
+.tooltip svg:hover {
+  border-bottom: 2px solid tomato;
+}
+
+label.input-toggle {
+  line-height: 0;
+  font-size: 0;
+  display: inline-block;
+  margin: 0;
+  float: right;
+}
+
+label.input-toggle > span {
+  display: inline-block;
+  position: relative;
+  background-image: -webkit-linear-gradient(left, #848484 0%, #848484 50%, rgba(127,202,195, 0.5) 20%, rgba(127,202,195, 0.5) 100%);
+  background-image: linear-gradient(to right, #848484 0%, #848484 50%, rgba(127,202,195, 0.5) 20%, rgba(127,202,195, 0.5) 100%);
+  background-size: 64px 14px;
+  background-position: 0%;
+  border-radius: 32px;
+  width: 32px;
+  height: 14px;
+  cursor: pointer;
+  -webkit-transition: background-position 0.2s ease-in;
+  transition: background-position 0.2s ease-in;
+}
+
+label.input-toggle > input:checked + span { background-position: -100%; }
+
+label.input-toggle > span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #F1F1F1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-transition: left 0.2s ease-in, background-color 0.2s ease-in, -webkit-transform 0.3s ease;
+  transition: left 0.2s ease-in, background-color 0.2s ease-in, -webkit-transform 0.3s ease;
+  transition: left 0.2s ease-in, background-color 0.2s ease-in, transform 0.3s ease;
+  transition: left 0.2s ease-in, background-color 0.2s ease-in, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+label.input-toggle > input:checked + span:after {
+  left: calc(100% - 18px);
+  background-color: #80CBC4;
+}
+
+label.input-toggle > span:active:after {
+  -webkit-transform: translateY(-50%) scale3d(1.15, 0.85, 1);
+  transform: translateY(-50%) scale3d(1.15, 0.85, 1);
+}
+
+label.input-toggle > input:disabled + span:active:after {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+label.input-toggle > input:disabled + span { cursor: default; }
+
+label.input-toggle > input:disabled + span { background: #D5D5D5; }
+
+label.input-toggle > input:disabled + span:after { background: #BDBDBD; }
+
+label.input-toggle > input {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hide, .off {
+  display: none;
+}
+
+
+.foto-box.off + .datos-box{
+  width: 100%;
+  margin-left: 0;
+}
+
+.plantilla-preview {
+  text-decoration: none;
+}
+
+[data-ocultable] {
+  cursor: pointer;
+}
+
+[data-ocultable] i {
+  float: right;
+  font-size: 1.25em;
+  margin-bottom: 5px;
+}
+
+#secciones li {
+  color: rgb(79,79,79) !important;
+}
+
+.sidebar-pdf .miniatura {
+  position: relative;
+  width: 122px;
+  display: inline-block;
+  margin: 0px 0px 40px 3px;
+}
+
+.sidebar-pdf .miniatura .foot-minuatura {
+  position: absolute;
+  top: 170px;
+  left: 0;
+  background-color: #dedede;
+  color: #4f4f4f;
+  width: 100%;
+  height: 26px;
+  line-height: 1.7em;
+  font-size: 0.9em;
+}
+
+.sidebar-pdf .miniatura .fa {
+  color: #CFB118;
+  font-size: 1.1em;
+  margin-left: 5px;
+}
+
+.mayus-negrita {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+.resetear {
+  color: #4F4F4F;
+  font-weight: normal;
+  font-size: 0.85em;
+  line-height: 1.2em;
+  padding: 10px;
+}
+
+.resetear a {
+  color: #319B68;
+  
+}

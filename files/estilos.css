@@ -1,0 +1,391 @@
+*, body {
+  font-family: 'Poppins', sans-serif; }
+
+#hojas {
+  zoom: 1.5;
+}
+
+.cv-pdf {
+  padding: 0;
+}
+
+.foto-box {
+  padding: 10px;
+  margin: 0;
+  width: 175px;
+  text-align: center;
+}
+
+.foto-box img {
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  margin-top: 30px;
+}
+
+.datos-box {
+  padding: 0 30px 0 19px !important;
+  width: 420px;
+  height: 143px;
+}
+
+.nombre-box {
+  padding-top: 30px;
+  margin: 0;
+}
+
+table td [data-elemento] [data-info=email] {
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.nombre-box h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-weight:500;
+  color:#4F4F4F;
+}
+
+.nombre-box h2 {
+  font-size: 15px;
+  font-weight:400;
+  color:#828282;
+  font-style: italic;
+  padding: 0;
+  margin: 2px 0 0 0;
+}
+
+.contacto-box {
+  color: #4F4F4F;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0 0 0;
+  font-size: 9px;
+  border-bottom:  1px solid #888;
+  padding-bottom: 10px;
+}
+
+.contacto-box i{
+  color:#4F4F4F;
+}
+
+.contacto-box span{
+  font-weight:400;
+}
+
+.contacto-box table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+}
+.cuerpo {
+  padding: 21px 28px 20px 33px; }
+
+.contenido {
+  width: 100%;}
+
+.columna1 {
+  width: 195px;
+  padding: 5px 10px 5px 20px !important;}
+
+.columna2 {
+  width: 420px;
+  padding: 5px 30px 19px 19px !important;}
+
+.columna1, .columna2 {
+  height: 100%;}
+
+.cv-pdf:first-child .columna1, .cv-pdf:first-child .columna2 {
+  height: 100%;}
+
+.columna2 .seccion:not(:first-child) {
+  padding-top: 0;
+}
+.columna2 .seccion {
+  padding-bottom: 5px;
+}
+
+.seccion {
+  padding: 0;
+  font-size: 8px;
+}
+
+.columna1 .seccion h1, .columna1 .seccion h1 [data-info=titulo] {
+  margin: 0;
+  font-size: 13px;
+  font-weight:600; 
+  color:#fff;
+}
+
+.columna2 .seccion h1, .columna2 .seccion h1 [data-info=titulo] {
+  margin: 0;
+  font-size: 13px;
+  font-weight:600; 
+  color:#4F4F4F;
+}
+
+.seccion h1 i.fa {
+  font-size: 0.9em;
+}
+
+.columna1 .contenido-seccion {
+  padding: 0;
+}
+
+.bloque {
+  padding: 5px 0;
+  margin-top: 5px;
+}
+
+[data-id=seccion-trabajo] [data-info=titulo], [data-id=seccion-extraderecha] [data-info=titulo] {
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  font-weight:600;
+  color:#4F4F4F;
+}
+
+[data-id=seccion-trabajo] .lugar {
+  font-weight:600;
+  color:#4F4F4F;
+  margin-bottom: 3px;
+}
+
+[data-id=seccion-trabajo] .fechas {
+  font-style: italic;
+  font-weight:400;
+  color:#4F4F4F;
+  margin-bottom: 3px; 
+  float: right;
+}
+
+[data-id=seccion-trabajo] .descripcion, [data-id=seccion-extraderecha] .descripcion {
+  font-weight:400;
+  color:#4F4F4F;
+  line-height: 10px;
+  font-size: 8px;
+}
+
+[data-id=seccion-educacion] [data-info=titulo] {
+  text-transform: uppercase;
+  font-weight:500;
+  color:#4F4F4F;
+  margin-bottom: 3px; }
+
+[data-id=seccion-educacion] .lugar {
+  font-weight:600;
+  color:#4F4F4F;
+  margin-bottom: 3px; }
+
+[data-id=seccion-educacion] .fechas {
+  font-weight:400;
+  color:#4F4F4F;
+  margin-bottom: 3px; }
+
+[data-id=seccion-educacion] .descripcion {
+  color: #888;
+  line-height: 10px;
+  font-size: 8px; }
+
+[data-id=seccion-curso] [data-info=titulo] {
+  text-transform: uppercase;
+  margin-bottom: 3px; }
+
+div[data-id=seccion-curso] .bloque .titulo {
+  font-weight:600; 
+  color:#4F4F4F;
+}
+
+div[data-id=seccion-curso] .bloque .nivel {
+  font-weight:400; 
+  color:#4F4F4F;
+}
+
+div[data-id=seccion-idioma] ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+div[data-id=seccion-idioma] li {
+  margin: 0;
+}
+div[data-id=seccion-objetivo] {
+  color: #777;
+}
+div[data-id=seccion-sobremi] {
+  font-weight:400;
+  color:#ffffff;
+  line-height: 10px;
+  font-size: 8px;;
+}
+
+div[data-id=seccion-habilidad] .contenido-seccion {
+  width: 100%;
+}
+div[data-id=seccion-habilidad] ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+div[data-id=seccion-habilidad] li {
+  margin: 0;
+  display: inline-block;
+}
+div[data-id=seccion-habilidad] .bloque .texto {
+  display: inline-block;
+  width: 77px;
+  text-align: right;
+  padding-right: 5px;
+  font-weight:400;
+  color:#ffffff;
+}
+div[data-id=seccion-habilidad] .bloque {
+  display: block;
+  padding: 4px 0 3px 0;
+}
+.puntos li {
+  margin-right: 2px !important;
+}
+
+div[data-id=seccion-qr] {
+  font-weight:400; 
+  color:#4F4F4F;
+}
+div[data-id=seccion-qr] .contenido-seccion table td {
+  vertical-align: middle;
+}
+div[data-id=seccion-qr] img {
+  width: 90px;
+  height: 90px;
+}
+.seccion ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.seccion li {
+  margin: 0;
+  padding: 0;
+}
+[data-id=seccion-otrosintereses] {
+  font-weight:400; color:#ffffff;
+}
+div[data-id=seccion-otrosintereses] .contenido-seccion table td {
+  vertical-align: middle;
+}
+div[data-id=seccion-otrosintereses] .contenido-seccion table td:first-child {
+  vertical-align: top;
+}
+div[data-id=seccion-otrosintereses] li {
+  margin-top: 5px;
+}
+div[data-id=seccion-otrosintereses] li .imagen svg {
+  width: 26px;
+  height: 26px;
+}
+div[data-id=seccion-otrosintereses] li .imagen:hover {
+  cursor: pointer;
+}
+div[data-id=seccion-otrosintereses] li .imagen.selector {
+  margin-right: 5px;
+}
+
+[data-id=seccion-otrosintereses] svg path {
+  color: #fff;
+}
+[data-id=seccion-otrosintereses] svg path {
+  fill: #fff;
+}
+
+.columna1 .seccion:not(:last-child) {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+}
+
+.columna1 .seccion {
+  margin-top: 14px;
+}
+
+.columna1 .seccion h1 {
+  text-align: center;
+}
+
+.columna2 .seccion:not(:last-child) {
+  border-bottom: 1px solid #999;
+  padding-bottom: 3px;
+  margin-bottom: 16px;
+}
+
+div[data-id=seccion-curso] .bloque {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+div[data-id=seccion-curso] .bloque .titulo {
+  color: #333 !important;
+  font-weight: bold;
+}
+
+div[data-id=seccion-referencia] .bloque .autor {
+  color: #333 !important;
+  font-weight: bold; 
+}
+
+.columna2 .seccion .bloque {
+  color: #888;
+}
+
+.columna1 .seccion h1 {
+  margin-bottom: 7px !important;
+}
+
+[data-id=seccion-certificacion] .certificacion {
+  font-weight:600;
+  color:#ffffff;
+  font-size: 1.1em;
+  margin-bottom: 2px;
+}
+
+[data-id=seccion-certificacion] .entidad {
+  font-weight:400;
+  color:#ffffff;
+}
+
+[data-id=seccion-certificacion] .bloque {
+  margin-top: 10px;
+}
+
+[data-id=seccion-idioma] .bloque .idioma {
+  font-weight:400;
+  color:#ffffff;
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.off[data-elemento] {
+  display: block;
+  visibility: hidden;
+}
+
+[data-id=seccion-habilidad] li:hover .barra-edicion {
+  left: 0;
+  right: auto !important;
+}
+
+table td [data-elemento] i {
+  vertical-align: top;
+}
+
+table td [data-elemento] [data-info=telefono] {
+  display: inline-block;
+  min-width: 85px;
+}
+
+table td [data-elemento] [data-info=ubicacion] {
+  display: inline-block;
+  min-width: 100px;
+  text-align: left;
+}
